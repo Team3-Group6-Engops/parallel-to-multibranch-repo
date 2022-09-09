@@ -45,7 +45,6 @@ pipeline{
                 }
                 stage('claudi-parallel-stage2'){
                     steps{
-                        sh 'chmod +x claudi.sh'
                         sh 'bash -x claudi.sh'
                     }
                 }
