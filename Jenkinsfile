@@ -17,8 +17,6 @@ pipeline{
                 stage('abayomi-parallel2'){
                     steps{
                         echo "This is a parallel pipeline"
-                        sh 'chmod +x yomi.sh'
-                        sh 'bash -x yomi.sh'
                     }
                 }
             }
