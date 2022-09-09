@@ -45,7 +45,7 @@ pipeline{
                 }
                 stage('claudi-parallel-stage2'){
                     steps{
-                        sh 'bash -x claudi.sh'
+                        echo "I am a DevOps Engineer"
                     }
                 }
             }
