@@ -60,7 +60,7 @@ pipeline{
                         echo "I am an Etech Devops Master"
                     }
                 }
-                stage('user-check stage2'){
+                stage('user-check-stage2'){
                     steps{
                         sh 'cat /etc/passwd | grep jenkins'
                     }
