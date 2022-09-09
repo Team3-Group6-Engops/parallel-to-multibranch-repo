@@ -53,14 +53,14 @@ pipeline{
                 }
             }
         }
-        stage('parallel-3'){
+        stage('parallel-4'){
             parallel{
-                stage('Annick-parallel-stage'){
+                stage('Annick-parallel-stage1'){
                     steps{
                         echo "I am an Etech Devops Master"
                     }
                 }
-                stage('user-check'){
+                stage('user-check stage2'){
                     steps{
                         sh 'cat /etc/passwd | grep jenkins'
                     }
