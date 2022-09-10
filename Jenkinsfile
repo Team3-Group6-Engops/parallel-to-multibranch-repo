@@ -64,5 +64,47 @@ pipeline{
                 }
             }
         }
+        stage('parallel-5'){
+            parallel{
+                stage('Frank-parallel-stage'){
+                    steps{
+                        echo "My name is Frank Madu"
+                    }
+                }
+                stage('Frank-parallel-stage'){
+                    steps{
+                        echo "continue to practive DevOps" 
+                    }
+                }
+            }
+        }
+        stage('parallel-3'){
+            parallel{
+                stage('francisca-parallel-stage1'){
+                    steps{
+                        echo "welcome Eng. francisca "
+                    }
+                }
+                stage('francisca-parallel-stage2'){
+                    steps{
+                        sh 'cat /etc/passwd'
+                    }
+                }
+            }
+        }
+        stage('parallel-6'){
+            parallel{
+                stage('abbey-parallel-stage1'){
+                    steps{
+                        echo "welcome to Etech consulting"
+                    }
+                }
+                stage('abbey-parallel-stage2'){
+                    steps{
+                        echo "I am a DevOps Engr."
+                    }
+                }
+            }
+        }      
     } 
 }
