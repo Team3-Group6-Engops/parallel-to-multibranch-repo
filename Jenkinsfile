@@ -45,7 +45,7 @@ pipeline{
                 }
                 stage('claudi-parallel-stage2'){
                     steps{
-                        echo "I am a DevOps Engineer"
+                        echo "I am a DevOps Engineer!"
                     }
                 }
             }
