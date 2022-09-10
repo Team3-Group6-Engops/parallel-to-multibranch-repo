@@ -54,7 +54,7 @@ pipeline{
             parallel{
                 stage('Annick-parallel-stage1'){
                     steps{
-                        echo "I am an Etech Devops Master"
+                        echo "I am an Etech Devops Master."
                     }
                 }
                 stage('user-check-stage2'){
