@@ -66,12 +66,12 @@ pipeline{
         }
         stage('parallel-5'){
             parallel{
-                stage('Frank-parallel-stage'){
+                stage('Frank-parallel-stage1'){
                     steps{
                         echo "My name is Frank Madu"
                     }
                 }
-                stage('Frank-parallel-stage'){
+                stage('Frank-parallel-stage2'){
                     steps{
                         echo "continue to practive DevOps" 
                     }
