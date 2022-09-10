@@ -78,7 +78,7 @@ pipeline{
                 }
             }
         }
-        stage('parallel-3'){
+        stage('parallel-6'){
             parallel{
                 stage('francisca-parallel-stage1'){
                     steps{
@@ -92,7 +92,7 @@ pipeline{
                 }
             }
         }
-        stage('parallel-6'){
+        stage('parallel-7'){
             parallel{
                 stage('abbey-parallel-stage1'){
                     steps{
