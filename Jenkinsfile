@@ -16,7 +16,7 @@ pipeline{
                 }
                 stage('abayomi-parallel2'){
                     steps{
-                        echo "This is a parallel pipeline"
+                        echo "This is a parallel pipeline."
                     }
                 }
             }
