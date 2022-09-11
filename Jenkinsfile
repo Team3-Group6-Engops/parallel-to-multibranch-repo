@@ -6,7 +6,7 @@ pipeline{
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-id', url: 'https://github.com/Team3-Group6-Engops/parallel-to-multibranch-repo.git']]])
             }
         }
-        stage('conditional stage 1'){
+        stage('conditional stage1'){
            when{
                branch 'feature'
            }
@@ -43,7 +43,7 @@ pipeline{
                 }
             }
         }  
-        stage('conditional stage 2'){
+        stage('conditional stage2'){
            when{
                branch 'develop'
            }
@@ -94,7 +94,7 @@ pipeline{
                 }
             }
         }
-        stage('conditional stage 3'){
+        stage('conditional stage3'){
            when{
                branch 'main'
            }
