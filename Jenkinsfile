@@ -6,6 +6,14 @@ pipeline{
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-id', url: 'https://github.com/Team3-Group6-Engops/parallel-to-multibranch-repo.git']]])
             }
         }
+        stage('conditional stage'){
+           when{
+               branch 'feature'
+           }
+           steps{
+                echo "only run on feature branch"
+           }
+        }
         stage('parallel-1'){
             parallel{
                 stage('abayomi-parallel-stage'){
