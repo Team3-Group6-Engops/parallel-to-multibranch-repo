@@ -43,6 +43,14 @@ pipeline{
                 }
             }
         }  
+        stage('conditional stage'){
+           when{
+               branch 'develop'
+           }
+           steps{
+                echo "only run on feature branch"
+           }
+        }
         stage('parallel-3'){
             parallel{
                 stage('claudi-parallel-stage1'){
@@ -85,6 +93,14 @@ pipeline{
                     }
                 }
             }
+        }
+        stage('conditional stage'){
+           when{
+               branch 'main'
+           }
+           steps{
+                echo "only run on feature branch"
+           }
         }
         stage('parallel-6'){
             parallel{
