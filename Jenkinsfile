@@ -6,6 +6,14 @@ pipeline{
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-id', url: 'https://github.com/Team3-Group6-Engops/parallel-to-multibranch-repo.git']]])
             }
         }
+        stage('conditional stage 1'){
+           when{
+               branch 'feature'
+           }
+           steps{
+                echo "only run on feature branch"
+           }
+        }
         stage('parallel-1'){
             parallel{
                 stage('abayomi-parallel-stage'){
@@ -35,6 +43,14 @@ pipeline{
                 }
             }
         }  
+        stage('conditional stage 2'){
+           when{
+               branch 'develop'
+           }
+           steps{
+                echo "only run on feature branch"
+           }
+        }
         stage('parallel-3'){
             parallel{
                 stage('claudi-parallel-stage1'){
@@ -54,7 +70,7 @@ pipeline{
             parallel{
                 stage('Annick-parallel-stage1'){
                     steps{
-                        echo "I am an Etech Devops Master"
+                        echo "I am an Etech Devops Master."
                     }
                 }
                 stage('user-check-stage2'){
@@ -77,6 +93,14 @@ pipeline{
                     }
                 }
             }
+        }
+        stage('conditional stage 3'){
+           when{
+               branch 'main'
+           }
+           steps{
+                echo "only run on feature branch"
+           }
         }
         stage('parallel-6'){
             parallel{
