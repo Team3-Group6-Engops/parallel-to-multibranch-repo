@@ -11,7 +11,7 @@ pipeline{
                branch 'feature'
            }
            steps{
-                echo "only run on feature branch"
+                echo "only run on feature branch1"
            }
         }
         stage('parallel-1'){
@@ -125,7 +125,7 @@ pipeline{
                 }
                 stage('abbey-parallel-stage2'){
                     steps{
-                        echo "I am a DevOps Engr."
+                        echo "I am a DevOps Engr1."
                     }
                 }
             }
